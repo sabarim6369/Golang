@@ -23,7 +23,7 @@ func Dummy() {
 
 	// content := string(data)
 	var postdata Data;
-	err=json.Unmarshal(data,&postdata);
+	err=json.Unmarshal(data,&postdata);    //map json data to struct
 	errorhandler(err);
 fmt.Printf("%+v\n", postdata)
 	// fmt.Println(content)
