@@ -1,0 +1,15 @@
+No, you should not import main as a package in other Go files or packages.
+
+
+Why?
+The main package in Go is special: it's the entry point for an executable program.
+
+It cannot be imported by other packages because it's meant to produce a standalone executable, not a reusable library.
+
+If you try to import a package named main, the compiler will complain or it simply won't work as intended.
+
+What to do instead?
+If you want to reuse code from your main package, move that reusable code into a separate package (in another folder) with a meaningful name.
+
+Then, import that package both in your main package (for executable) and in other packages if needed.
+
